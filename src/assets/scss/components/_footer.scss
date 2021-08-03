@@ -2,7 +2,7 @@
 	padding: 15px;
 	margin-left: 260px;
 	width: calc(100vw - 264px);
-	background: #03b5f4;
+	background: #6f4d9f;
 	@if $enable-shadows == true {
 		@include shadow-mixin($box-shadow);
 	}

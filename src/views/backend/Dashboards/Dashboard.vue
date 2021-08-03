@@ -2,19 +2,14 @@
   <div>
     <div class="header">
       <div class="logo">
-        <a href="https://otterpocket.io">
-          <img src="@/assets/images/Otter-Title.png" alt="" />
+        <a href="https://nindough.uwu.ai">
+          <img src="@/assets/images/ndicon.svg" alt="" />
         </a>
-        <h6>Alpha <span>1.0.1</span></h6>
+        <h1><span>nindough</span></h1>
+        <h6>alpha <span>1.0.0</span></h6>
       </div>
 
       <div class="nav-right">
-        <div class="balance" v-if="walletAccount && network == 137">
-          Otter: {{ otterBalance }}
-        </div>
-        <div class="balance" v-if="walletAccount && network == 137">
-          Matic: {{ polygonBalance.toFixed(2) }}
-        </div>
         <div class="address" v-if="walletAccount">
           <a
             :href="`https://polygonscan.com/address/${walletAccount[0]}`"
@@ -30,7 +25,7 @@
           v-if="!walletAccount"
           @click="reloadPage()"
         >
-          Connect
+          <h5>Log in</h5>
         </div>
       </div>
     </div>
@@ -51,61 +46,27 @@
         <i class="ri-menu-fold-line"></i>
       </span>
       <div
-        style="position: absolute; top:2em; left: 1em; font-weight: 600; color:#ffffff;"
+        style="position: absolute; top:2em; left: 2.1em; font-weight: 1000; color:#ffffff;"
       >
-        Upload Price: <br />
-        {{ uploadFee }} OTTER
+        <h2>Your ninjas. </h2>
       </div>
-      <div style="position: absolute; top:8em; left: 1em; ">
-        <a
-          href="https://quickswap.exchange/#/swap?outputCurrency=0xe718eda678aff3f8d1592e784652bcbeeb49e352"
-        >
+      <div
+        style="position: absolute; top:6em; left: 2.1em; font-weight: 200; color:#ffffff;"
+      >
+
+        <p>The friend list will go here.</p>
+      </div>
+      <div style="position: absolute; top:12em; left: 2em; ">
         
-          <span
-            style="padding: 0.5em 1em; border: 1px solid #ffffff; border-radius: 1em; color:#ffffff;"
-          >
-            Buy OTTER 
-          </span>
-        </a>
-      </div>
-      <div style="position: absolute; top:12em; left: 1em; ">
-        <a
-          href="https://matic.supply/"
-        >
-          <span
-            style="padding: 0.5em 1em; border: 1px solid #ffffff; border-radius: 1em; color:#ffffff; font-size: 0.7em;"
-          >
-            Polygon Faucet
-          </span>
-        </a>
-        <div style="position: absolute; bottom:-10em; left: -0.6em; font-weight: 600;">
         
-          
-          <h6>Otter Price:</h6>
-         
-          </div>
       </div>
-      <div style="position: absolute; bottom:8em; left: 1.25em; font-weight: 600;">
+      <div style="position: absolute; bottom:3em; left: 2em; font-weight: 600;">
         <a href="https://quickchart.app/token/0xe718eda678aff3f8d1592e784652bcbeeb49e352">
-          <img src="@/assets/images/otter-icon.png" style="width: 2em;" />
+          <img src="@/assets/images/ndicon.svg" style="width: 1.5em;" />
           <span style="color:#ffffff;"> ${{ otterPrice }}</span></a
         >
       </div>
-      <div style="position: absolute; bottom:4em; left: 0.8em; ">
-        <a href="https://twitter.com/Otter_pocket">
-          <img
-            src="@/assets/images/icon/OPTWITTER.svg"
-            style="width: 2.5em; margin-right: 0.5em;"
-          />
-        </a>
-        <a href="https://t.me/otterpocketstorage">
-          <img src="@/assets/images/icon/OPTELEGRAM.svg" style="width: 2.5em; margin-right: 0.5em;" />
-        </a>
-        <a href="https://otterpocket.medium.com/">
-                  <img src="@/assets/images/icon/OPMEDIUM.svg" style="width: 2.5em;" />
-
-        </a>
-      </div>
+      
     </div>
 
            
@@ -134,96 +95,65 @@
           >
             <div class="card-body property2-content">
               <div class="d-flex flex-wrap align-items-center">
-                <div class="col-lg-6 col-sm-6 p-0">
-                  <h3 class="mb-3" v-if="network == 1">
-                    Error!
-                  </h3>
-                  <p class="mb-3" v-if="network == 1">
-                    
-                    You are connected to the Ethereum network. Please connect to the Polygon
-                    Network to use Otter. Not sure how?
+                <div class="col-lg-10 col-sm-6 p-0">
+                  <h4 class="mb-3" v-if="network == 1">
+                           <img src="@/assets/images/icon/NDALERT.svg"
+                          style="width:1.4em; margin-right: 0.1em;"/>
+                    Please connect to the polygon mainnet to use nindough.
                     <a
                       href="https://medium.com/stakingbits/setting-up-metamask-for-polygon-matic-network-838058f6d844"
-                      >Set up Polygon Network on metamask.</a
+                      >Not sure how?</a
                     >
-                  </p>
-                  <div style="position: absolute; bottom:0em; top:-2em; left: 24em;" v-if="network == 1">
-          <img src="@/assets/images/OPWGETH.png" alt="" style="width: 15em;"/>
-          </div>
-                  <h3 class="mb-3" v-if="network == 56">
-                    Error!
-                  </h3>
-                  <p class="mb-3" v-if="network == 56">
-                    You are connected to the BSC network. Please connect to the Polygon
-                    Network to use Otter. Not sure how?
+                  </h4>
+                   
+                  <h4 class="mb-3" v-if="network == 56">
+                         <img src="@/assets/images/icon/NDALERT.svg"
+                          style="width:1.4em; margin-right: 0.1em;"/>
+                    Please connect to the polygon mainnet to use nindough.
                     <a
                       href="https://medium.com/stakingbits/setting-up-metamask-for-polygon-matic-network-838058f6d844"
-                      >Set up Polygon Network on metamask.</a
+                      >Not sure how?</a
                     >
-                  </p>
-                  <div style="position: absolute; bottom:0em; top:-2em; left: 24em;" v-if="network == 56">
-          <img src="@/assets/images/OPWGBINANCE.png" alt="" style="width: 15em;"/>
-          </div>
+                  </h4>
 
-                  <h3 class="mb-3" v-if="network == 137">
-                    Connected!
-                  </h3>
-                  <p class="mb-3" v-if="network == 137">
-                    Upload any file type, any size, always accessible. Please, no illegal content, you will get banned.
-                    <a
-                      href="https://medium.com/stakingbits/setting-up-metamask-for-polygon-matic-network-838058f6d844"
-                      >Read our policy to find out more.</a
-                    >
-                  </p>
-                  
-                  <div style="position: absolute; bottom:0em; top:-1em; left: 24em;" v-if="network == 137">
-          <img src="@/assets/images/appFiles.png" alt="" style="width: 15em;"/>
-          </div>
-          <h3 class="mb-3" v-if="
-                      network &&
-                        network !== 137 &&
-                        network !== 56 &&
-                        network !== 1
-                    ">
-                    Error!
-                  </h3>
-                  <p
-                    class="mb-3"
+
+                  <h4 class="mb-3" v-if="network == 137">
+                    <img src="@/assets/images/icon/NDLOGGEDIN.svg"
+            style="width:1.4em; margin-right: 0.1em;"/>
+                    You're now logged in. Use the buttons below to navigate the nindough dApp.
+                  </h4>
+
+                  <h4 class="mb-3"
                     v-if="
                       network &&
                         network !== 137 &&
                         network !== 56 &&
-                        network !== 1
-                    "
-                  >
-                    You are connected to the Polygon testnet. Please connect to the mainnet
-                    to use Otter. Not sure how?
+                        network !== 1">
+                         <img src="@/assets/images/icon/NDALERT.svg"
+                          style="width:1.4em; margin-right: 0.1em;"/>
+                    Please connect to the polygon mainnet to use nindough.
                     <a
                       href="https://medium.com/stakingbits/setting-up-metamask-for-polygon-matic-network-838058f6d844"
-                      >Set up Polygon Network on metamask.</a
+                      >Not sure how?</a
                     >
-                  </p>
-                  <div style="position: absolute; bottom:0em; top:-2em; left: 24em;" v-if="
-                      network &&
-                        network !== 137 &&
-                        network !== 56 &&
-                        network !== 1
-                    ">
-          <img src="@/assets/images/OPWGTEST.png" alt="" style="width: 15em;"/>
-          </div>
-                  <p class="mb-3" v-if="!network">
-                    Connect using MetaMask! Not sure what MetaMask is?
-                    <a
-                      href="https://medium.com/stakingbits/setting-up-metamask-for-polygon-matic-network-838058f6d844"
-                      >Connect Polygon Network to metamask</a
-                    >
-                  </p>
+                  </h4>
+                  
+                  <h4 class="mb-3" v-if="!network">
+                    <img src="@/assets/images/icon/NDALERT.svg"
+            style="width:1.4em; margin-right: 0.1em;"/>
+                    Log in using Metamask. Not sure what that is?
+                    <a href="https://blog.wetrust.io/how-to-install-and-use-metamask-7210720ca047"
+                      >Learn more about metamask.</a>
+                  </h4>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        
+      
+
+
+      
         <div v-if="showUploadModal && walletAccount && network == 137" class="uploadModal">
           <div class="uploadModal__toolbar">
             <h4>Upload your File</h4>
@@ -238,80 +168,70 @@
           />
         </div>
 
-        <div class="col-lg-8 col-xl-8">
+        <div class="col-lg-8 col-xl-8" v-if="network == 137" >
           <div class="card card-block card-stretch card-height files-table">
-            <div class="card-header d-flex justify-content-between">
-              <div class="header-title">
-                <h4 class="card-title">Files in your pocket:</h4>
-              </div>
-            </div>
-            <div class="card-body pt-0">
-              <div class="table-responsive">
-                <table class="table mb-0 table-borderless tbl-server-info">
-                  <thead>
-                    <tr>
-                      <th scope="col">Name</th>
-                      <th scope="col">Type</th>
-                      <th scope="col">Size</th>
-                      <th scope="col">Uploaded</th>
-                      <th scope="col">Link</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr v-for="(file, index) in Files" :key="index">
-                      <td>
-                             <a  :href="`https://ipfs.infura.io/ipfs/${file.fileHash}`">
-                             <div class="d-flex align-items-center">
-                          <div :class="file.fileColor">
-                            <i :class="file.fileIcon"></i>
-                          </div>
-                          <span style="color:#535F6B;">{{
-                            file.fileName
-                          }}</span>
-                        </div>
-                      </a>
-                      </td>
-                      <td>{{ file.fileType }}</td>
-                      <td>{{ convertBytes(file.fileSize) }}</td>
-                      <td>
-                        {{ date(file.uploadTime) }}
-                      </td>
-                      <td>
-                        <a
-                          :href="`https://gateway.pinata.cloud/ipfs/${file.fileHash}`"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                        >
-                          {{ file.fileHash.substring(0, 10) }}...
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          
-          
-          <div class="upload">
-            <img src="@/assets/images/OPTB1.png" style="width: 10em;" @click="showUploadModal = true" alt="Upload"/>
             
+            <div class=row>
+             <div class="upload">
+            <a  :href="`https://quickchart.app/token/0xe718eda678aff3f8d1592e784652bcbeeb49e352`">
+            <img src="@/assets/images/NDB1EX.svg" style="width: 7.5em;" alt="Chart"/>
+            </a>
           </div>
           <div class="upload">
             <a  :href="`https://quickchart.app/token/0xe718eda678aff3f8d1592e784652bcbeeb49e352`">
-            <img src="@/assets/images/OPTB3.png" style="width: 10em;" alt="Chart"/>
+            <img src="@/assets/images/NDB5EX.svg" style="width: 7.5em;" alt="Chart"/>
             </a>
           </div>
+          <div class="upload">
+            <a  :href="`https://quickchart.app/token/0xe718eda678aff3f8d1592e784652bcbeeb49e352`">
+            <img src="@/assets/images/NDB4EX.svg" style="width: 7.5em;" alt="Chart"/>
+            </a>
+          </div>
+          <div class="upload">
+            <a href="#" id="profile" @click="activeTab = 'PROFILE'">
+            <img src="@/assets/images/NDB2EX.svg" style="width: 7.5em;" alt="Chart"/>
+            </a>
+          </div>
+          <div class="upload">
+            <a  :href="`https://quickchart.app/token/0xe718eda678aff3f8d1592e784652bcbeeb49e352`">
+            <img src="@/assets/images/NDB3EX.svg" style="width: 7.5em;" alt="Chart"/>
+            </a>
+          </div>
+          </div>
+          </div>
         </div>
+        <div id="over" class="{show : activeTab == 'OVER', hide : activeTab != 'OVER'}">
+        <div class="col-lg-9">
+          <div
+            class="card card-block card-stretch card-height iq-welcome">
+            <div class="card-body property2-content">
+              <div class="d-flex flex-wrap align-items-center">
+                <div class="col-lg-10 col-sm-6 p-0">
+                  
+        <h3 class="mb-3" v-if="network == 137">
+                    <p><img src="@/assets/images/icon/NDICPROFILE.svg"
+            style="width:10em; margin-right: -3.5em;"/>
+                    Profile
+                    </p>
+                    <a>Profile section goes here.</a>
+                  </h3>
+                  </div>
+                </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+
       </div>
       
     </div>
   </div>
 </template>
 <script>
+
+
+
 import UploadModal from "../UploadModal.vue";
 import Web3 from "web3";
 import OtterToken from "../../../abi/Otter.json";
@@ -340,8 +260,16 @@ export default {
       showUploadModal: false,
       fileCount: 0,
       Files: [],
+      
+      data: function () {
+  return {
+    activeTab: "OVER"
+  }
+}
+
     };
   },
+  
   mounted() {
     this.loadWeb3();
   },
@@ -447,13 +375,14 @@ export default {
 </script>
 <style lang="scss" scoped>
 .container-fluid {
-  margin-top: 0em;
+  margin-top: -2em;
+  
 }
 .upload {
   margin-top: 0.5em;
-  margin-bottom: 2em;
-  margin-left: 2.5em;
-  margin-right: 2.5em;
+  margin-bottom: 2.5em;
+  margin-left: 1.4em;
+  margin-right: 0em;
   padding: 0em 0em;
   border-radius: 2em;
   background-size: 300% 100%;
@@ -462,10 +391,10 @@ export default {
   text-align: center;
   background-image: linear-gradient(
     to right,
-    #03b5f4,
-    #03b5f4,
-    #03b5f4,
-    #14bffc
+    #6f4d9f,
+    #6f4d9f,
+    #63448e,
+    #63448e
   );
   &:hover {
     background-position: 100% 0;
@@ -500,18 +429,19 @@ export default {
 .header {
   position: fixed;
   top: 0;
-  height: 3.25em;
+  height: 3.5em;
   left: 0;
   width: 100%;
   padding: 0 2em;
   display: flex;
-  border: #14bffc 2px solid;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+  border-radius: 5px;
   justify-content: space-between;
   background: linear-gradient(
     90deg,
-    #03b5f4 0%,
-    #03b5f4 20%,
-    #03b5f4 100%
+    #6f4d9f 0%,
+    #6f4d9f 20%,
+    #6f4d9f 100%
   );
   z-index: 99;
 }
@@ -525,32 +455,39 @@ export default {
 }
 .side-bar {
   position: fixed;
-  left: -4px;
-  top: 3.1em;
-  width: 10em;
+  left: 0px;
+  top: 5em;
+  width: 20.4em;
   height: calc(100% - 3em);
   //border: 4px solid #46cdfd;
-  background: #03b5f4;
-  border: #14bffc 2px solid;
-  border-radius: 0px;
+  background: #6f4d9f;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+  border-radius: 5px;
   z-index: 99;
 }
 .connect-address {
-  border: white 1px solid;
+  background: #6f4d9f;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+  border-radius: 10px;
+  font-family: manrope;
   color: white;
+  letter-spacing: 1px;
   height: 2em;
   padding: 0 2em;
   margin-top: 0.5em;
   border-radius: 1em;
 }
 .address {
-  border: white 1px solid;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+  border-radius: 5px;
+  font-family: manrope;
   color: white;
   border-radius: 1em;
 
   height: 2em;
   padding: 0 2em;
-  margin-top: 0.5em;
+  padding-top: 5px;
+  margin-top: 0.75em;
 }
 .balance {
   margin-right: 1em;
@@ -563,13 +500,13 @@ export default {
   margin-top: 0.5em;
 }
 .logo img {
-  width:1.5em;
-  margin-top: 0.35em;
-  margin-left: -1.3em;
+  width:2em;
+  margin-top: 0.75em;
+  margin-left: 0em;
 }
 .connect-address:hover {
-  background: #46cdfd;
-  border: white 1px solid;
+  background: #63448e;
+  border: white 0px solid;
   cursor: pointer;
   color: white;
 }

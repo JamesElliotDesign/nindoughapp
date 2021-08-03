@@ -68,14 +68,14 @@
 
 
 body {
-	font-family: $font-family-base;
+	font-family: manrope;
 	font-weight: 200;
 	font-style: normal;
 	font-size: 16px;
 	line-height: normal;
 	padding: 0px;
 	margin: -20px;
-	color: $body-color;
+	color: #fff;
 	background: $body-bg;
 }
 a:hover{
@@ -88,54 +88,64 @@ a:hover{
     margin-bottom: 30px !important;
 }
 h1 {
-	font-family: $font-family-title;
-	font-weight: 400;
-	margin: 0px;
-	line-height: 1;
-	color: $body-title;
-	font-size: $h1-font-size;
+	font-family: manrope;
+	font-weight: 1000;
+	margin: 15px;
+	margin-top: -17px;
+	margin-left: 42px;
+	line-height: 0px;
+	letter-spacing: -1.25px;
+	color: #ffffff;
+	font-size: 21px;
 	a {
-		color: inherit;
+		color: #ffffff;
+		font-weight: 400;
 	}
 }
 h2 {
-	font-family: $font-family-title;
+	font-family: manrope;
 	font-weight: 400;
 	margin: 0px;
 	line-height: 1.5;
-	color: $body-title;
-	font-size: $h2-font-size;
-	a {
-		color: inherit;
-	}
-}
-h3 {
-	font-family: $font-family-title;
-	font-weight: 400;
-	margin: 0px;
-	line-height: 1.5;
-	color: $body-title;
+	color: #fff;
 	font-size: $h3-font-size
 	a {
 		color: inherit;
 	}
 }
+h3 {
+	font-family: manrope;
+	font-weight: 900;
+	letter-spacing: 0.5px;
+	margin: 0px;
+	margin-left: -50px;
+	margin-top: -60px;
+	line-height: 0;
+	color: #fff;
+	font-size: $h6-font-size;
+	a {
+		color: inherit;
+		margin-left: 75px;
+	}
+}
 h4 {
-	font-family: $font-family-title;
-	font-weight: 400;
+	font-family: manrope;
+	font-weight: 200;
+	letter-spacing: 0.5px;
 	margin: 0px;
 	line-height: 1;
-	color: $body-title;
-	font-size: $h4-font-size;
+	color: #fff;
+	font-size: $h6-font-size;
 	a {
 		color: inherit;
 	}
 }
 h5 {
-	font-family: $font-family-title;
+	font-family: manrope;
 	font-weight: 400;
+	letter-spacing: 0px;
 	margin: 0px;
-	margin-top: 0px;
+	margin-top: 15px;
 	margin-bottom: 0px;
 	line-height: 0px;
 	color: #ffffff;
@@ -145,15 +155,18 @@ h5 {
 	}
 }
 h6 {
-	font-family: $font-family-title;
-	font-weight: 400;
+	font-family: manrope;
+	font-weight: 200;
 	margin: 15px;
 	margin-top: -15px;
+	margin-left: 145px;
 	line-height: 0px;
 	color: #ffffff;
 	font-size: $h6-font-size;
 	a {
-		color: #46ccfc;
+		color: #ffffff;
+		font-weight: 400;
+		margin-left: 40px;
 	}
 }
 button:focus{

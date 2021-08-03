@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-6 text-right">
-          <h6>Otter Pocket © 2021 | Hosted on IPFS</h6>
+          <h6>nindough © 2021</h6>
         </div>
       </div>
     </div>

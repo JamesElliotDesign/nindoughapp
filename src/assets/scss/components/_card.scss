@@ -1,10 +1,13 @@
 /*----------------- Grid Boxes -----------------*/
 .card {
-	background: $white;
+	background: #6f4d9f;
 	@if $enable-rounded == true {
 		@include radius-mixin($border-radius);
 	}
-	margin-bottom: 30px;
+	margin-bottom: 0px;
+	margin-left: 80px;
+	width: 100%;
+	height: 100%;
 	border: none;
 	@if $enable-shadows == true {
 		@include shadow-mixin($box-shadow);
@@ -48,7 +51,9 @@
 	}
 }
 .card-body {
-	padding: 20px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	width: 800px;
 }
 .card-header-toolbar {
 	.nav-item {
@@ -56,11 +61,13 @@
 			color: $bodytext;
 			padding: 4px 12px;
 			font-size: 14px;
+			font-family: manrope;
 		}
 	}
 	.dropdown-toggle {
 		i {
 			font-size: 20px;
+			font-family: manrope;
 			line-height: normal;
 			vertical-align: text-bottom;
 		}
